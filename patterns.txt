@@ -1,0 +1,26 @@
+TWO POINTERS
+
+The Two-Pointer technique is fundamentally a way to reduce O(N²) nested loops down to O(N) by leveraging a known property of the data (like sorting, sequence, or contiguous memory).
+
+3. THE THREE MAJOR IDENTIFICATION TRIGGERS
+
+"Sorted" + "Pair/Target"
+
+The Clue: You need to find two numbers that sum to X, or find the closest pair. The array is sorted.
+
+The Approach: Opposite-direction. Start at 0 and N-1. Move inward based on whether the sum is too big or too small.
+
+"In-Place" + "Modify/Filter/Partition"
+
+The Clue: You need to remove duplicates, move zeros to the end, or segregate evens/odds using exactly O(1) extra space.
+
+The Approach: Same-direction (Slow/Fast). One pointer explores, the other pointer marks the boundary of the "clean" data.
+
+"Symmetry" or "Subsequence"
+
+The Clue: You are validating a palindrome, reversing data, or checking if sequence A exists chronologically within sequence B.
+
+The Approach: Opposite-direction for symmetry/reversals. Two-sequence Same-direction for subsequences.
+
+4. THE DISGUISE (ADVANCED RECOGNITION)
+Sometimes the "sorted" property means the extremes of the data live at the ends. For example, in an array containing both negative and positive numbers (e.g., [-5, -2, 0, 1, 4]), the largest absolute values (and therefore the largest squares: 25 and 16) are located at the far left and far right. If you need to process them by size, opposite-direction pointers can evaluate both ends and pick the largest one.
